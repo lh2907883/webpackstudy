@@ -1,0 +1,1 @@
+console.log("非ADM规范js, foo1.js");
