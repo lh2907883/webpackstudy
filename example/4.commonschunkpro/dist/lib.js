@@ -110,7 +110,7 @@
 
 	var log = __webpack_require__(2)
 	module.exports = function(){
-	    log.alert("a-b-c.js");
+	    log.alert("a-b-c.js111");
 	}
 
 /***/ },

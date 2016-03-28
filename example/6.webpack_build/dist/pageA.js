@@ -3,45 +3,49 @@ webpackJsonp([0],{
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	var Vue = __webpack_require__(6)
-	window.app = new Vue(__webpack_require__(8));
+	var Vue = __webpack_require__(1)
+	window.app = new Vue(__webpack_require__(3));
 
 
 /***/ },
 
-/***/ 8:
+/***/ 3:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(9)
-
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(4)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] pageA.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(14)
+	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(19)
-	if (false) {
-	(function () {
-	var hotAPI = require("vue-hot-reload-api")
-	hotAPI.install(require("vue"))
-	if (!hotAPI.compatible) return
-	var id = "-!babel?presets[]=es2015&plugins[]=transform-runtime!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./pageA.vue"
-	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel?presets[]=es2015&plugins[]=transform-runtime!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./pageA.vue","-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./pageA.vue"], function () {
-	var newOptions = require("-!babel?presets[]=es2015&plugins[]=transform-runtime!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./pageA.vue")
-	if (newOptions && newOptions.__esModule) newOptions = newOptions.default
-	var newTemplate = require("-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./pageA.vue")
-	hotAPI.update(id, newOptions, newTemplate)
-	})
-	})()
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
 	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/admin/mycode/webpackstudy/example/6.webpack_build/pageA.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
 
 /***/ },
 
-/***/ 9:
+/***/ 4:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var images = __webpack_require__(10);
-	var radios = __webpack_require__(13);
-	var textbox = __webpack_require__(16);
+	var images = __webpack_require__(5);
+	var radios = __webpack_require__(8);
+	var textbox = __webpack_require__(11);
 
 	module.exports = {
 	    el: "app",
@@ -56,7 +60,7 @@ webpackJsonp([0],{
 	        textbox_data: {
 	            name: 'textbox',
 	            placeholder: '请输入你的名字',
-	            value: 'xxx'
+	            value: 'xxxx'
 	        }
 	    },
 	    components: {
@@ -72,10 +76,10 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 19:
+/***/ 14:
 /***/ function(module, exports) {
 
-	module.exports = "<images :data=\"image_data\"></images>\n    <radios :data=\"radios_data\"></radios>\n    <textbox :data=\"textbox_data\"></textbox>";
+	module.exports = "\n<images :data=\"image_data\"></images>\n<radios :data=\"radios_data\"></radios>\n<textbox :data=\"textbox_data\"></textbox>\n";
 
 /***/ }
 

@@ -7,7 +7,7 @@ webpackJsonp([3],{
 	var FOO = "FOO2.js"
 
 	/*** EXPORTS FROM exports-loader ***/
-	module.exports = FOO
+	module.exports = FOO;
 
 /***/ }
 
