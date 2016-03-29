@@ -26,6 +26,7 @@ var webpackConfig = {
   plugins: [
     //样式生成在style文件夹下
     new ExtractTextPlugin('./style/[name].css'),
+    //如果报错'Error: Parameter 'dependency' must be a Dependency',请全局装webpack, npm install -g webpack
     new HtmlWebpackPlugin({
       //只添加index.js
       chunks: ["index"],
