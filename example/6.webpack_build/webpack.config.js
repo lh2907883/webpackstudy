@@ -4,8 +4,7 @@ var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
 module.exports = {
 
   entry: {
-    'style.temp': ['file?name=[name].css!stylus!./init.stylus'], 
-        'style.temp': ['file?name=[name].css!stylus!./init.stylus'], 
+    'style.temp': ['file?name=[name].css!stylus!./init.stylus'],
     pageA: './pageA.js', 
     pageB: './pageB.js', 
     //在模块中加入webpack/hot/dev-server
