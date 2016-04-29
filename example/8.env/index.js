@@ -3,7 +3,7 @@ if(module.hot){
     module.hot.accept();
 }
 
-require('./init.stylus');
+require('./init.less');
 
 var h1 = document.createElement('h1');
 h1.innerHTML = 'Hello world!';

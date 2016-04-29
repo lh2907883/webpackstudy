@@ -19,7 +19,7 @@ var webpackConfig = {
           presets: ['es2015']
         }
       },
-      { test: /\.stylus$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!stylus-loader") }
+      { test: /\.less$/, loader: ExtractTextPlugin.extract("less", "css!less") }
     ]
   },
   plugins: [
