@@ -32,20 +32,20 @@ var webpackConfig = {
     //样式生成在style文件夹下
     new ExtractTextPlugin('./style/[name].css'),
     //如果报错'Error: Parameter 'dependency' must be a Dependency',请全局装webpack, npm install -g webpack
-    // new HtmlWebpackPlugin({
-    //   //只添加index.js
-    //   chunks: ["index"],
-    //   //通过加hash清除缓存
-    //   hash: true,
-    //   //只针对特定html
-    //   template: './index.html',
-    //   //生成的文件名
-    //   filename: "index.html",
-    //   minify:{    //压缩HTML文件
-    //     removeComments:true,    //移除HTML中的注释
-    //     collapseWhitespace:true    //删除空白符与换行符
-    //   }
-    // })
+    new HtmlWebpackPlugin({
+      //只添加index.js
+      chunks: ["index"],
+      //通过加hash清除缓存
+      hash: true,
+      //只针对特定html
+      template: './index.html',
+      //生成的文件名
+      filename: "index.html",
+      minify:{    //压缩HTML文件
+        removeComments:true,    //移除HTML中的注释
+        collapseWhitespace:true    //删除空白符与换行符
+      }
+    })
   ]
 };
 module.exports = webpackConfig

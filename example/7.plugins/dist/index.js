@@ -44,19 +44,18 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	module.exports = __webpack_require__(1);
 
-	__webpack_require__(1);
-
-	var h1 = document.createElement('h1');
-	h1.innerHTML = 'Hello world!';
-	document.body.appendChild(h1);
 
 /***/ },
 /* 1 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	'use strict';
+
+	var h1 = document.createElement('h1');
+	h1.innerHTML = 'Hello world!';
+	document.body.appendChild(h1);
 
 /***/ }
 /******/ ]);

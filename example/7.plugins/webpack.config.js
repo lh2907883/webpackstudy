@@ -1,9 +1,10 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var IgnoreCssDotJsPlugin = require('./plugin/ignoreCssDotJs-plugin.js');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var webpackConfig = {
   entry: {
-    'index': './index.js',
-    'index1': './index1.js'
+    'init.css': ['./init.stylus'],
+    'index': ['./index.js']
   },
   output: {
     path: 'dist',
@@ -25,11 +26,11 @@ var webpackConfig = {
   },
   plugins: [
     //样式生成在style文件夹下
-    new ExtractTextPlugin('./style/[name].css'),
+    new ExtractTextPlugin('./style/[name]'),
     //如果报错'Error: Parameter 'dependency' must be a Dependency',请全局装webpack, npm install -g webpack
     new HtmlWebpackPlugin({
-      //只添加index.js
-      chunks: ["index"],
+      //只添加index.js, init.css
+      chunks: ["index", 'init.css'],
       //通过加hash清除缓存
       hash: true,
       //只针对特定html
@@ -38,9 +39,12 @@ var webpackConfig = {
       filename: "main.html",
       minify:{    //压缩HTML文件
         removeComments:true,    //移除HTML中的注释
-        collapseWhitespace:true    //删除空白符与换行符
+        collapseWhitespace:false    //删除空白符与换行符
       }
-    })
+    }),
+    //如果没有这个插件main.html会插入<script src="init.css.js"></script>,这个js是因为我们设置了init.css作为入口生成的一个空的js,本身没有意义
+    //现在可以通过RemoveCssDotJs插件来配置忽略init.css.js的插入
+    new IgnoreCssDotJsPlugin('init.css')
   ]
 };
 module.exports = webpackConfig
