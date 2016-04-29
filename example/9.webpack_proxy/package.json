@@ -1,0 +1,13 @@
+{
+  "name": "8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "build": "webpack -p",
+    "debug": "webpack-dev-server --content-base ./ --port 9966 --config webpack.debug.config.js",
+    "hot": "webpack-dev-server --content-base ./ --hot --port 9966 --config webpack.debug.config.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
