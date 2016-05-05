@@ -4,11 +4,13 @@ require(["./src/js/test1.js"], function(test1){
     console.log(JSON.stringify(test1));
 })
 
-// //加载"./src/js/test1.js"后,执行回调方法(注意:并不执行test1.js的代码)
+//加载"./src/js/test1.js"后,执行回调方法(注意:并不执行test1.js的代码)
 // require.ensure(["./src/js/test1.js"], function(require) {
-//     //这里才执行test1.js的代码
-//     var a = require("./src/js/test1.js"); 
-//     alert(JSON.stringify(a));
+//     window.setTimeout(function(){
+//         //这里才执行test1.js的代码
+//         var a = require("./src/js/test1.js"); 
+//         alert(JSON.stringify(a));
+//     }, 3000);
 // });
 
 //异步加载test2.js

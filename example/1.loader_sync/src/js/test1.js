@@ -1,4 +1,4 @@
-
+console.log('hehehe')
 require('../lib/lib1.js')
 
 module.exports = {

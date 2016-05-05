@@ -1,10 +1,10 @@
-webpackJsonp([1],{
-
-/***/ 13:
+webpackJsonp([1],[
+/* 0 */,
+/* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
-	__webpack_require__(14)
+	console.log('hehehe')
+	__webpack_require__(2)
 
 	module.exports = {
 	    a: 1,
@@ -12,12 +12,10 @@ webpackJsonp([1],{
 	}
 
 /***/ },
-
-/***/ 14:
+/* 2 */
 /***/ function(module, exports) {
 
 	module.exports = 'this is the lib1.js';
 
 /***/ }
-
-});
+]);
